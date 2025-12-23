@@ -1,0 +1,7 @@
+{
+  "name": "online-exam-backend",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
