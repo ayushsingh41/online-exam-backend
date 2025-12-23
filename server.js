@@ -51,9 +51,10 @@ app.use("/api/exams", examRoutes);
 app.use("/api/results", resultRoutes);
 app.use("/api/questions", questionRoutes);
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch(err => console.log(err));
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.error("Mongo error:", err.message));
 
 const PORT = process.env.PORT || 5000;
 
